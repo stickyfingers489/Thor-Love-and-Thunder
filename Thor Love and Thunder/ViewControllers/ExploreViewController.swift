@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import Combine
 
 class ExploreViewController: UIViewController {
 
     @IBOutlet weak var topicTableView: UITableView!
     @IBOutlet weak var sectionsCollectionsView: UICollectionView!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    
+    private var tokens: Set<AnyCancellable> = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +27,13 @@ class ExploreViewController: UIViewController {
         topicTableView.delegate = self
         topicTableView.dataSource = self
         topicTableView.layer.masksToBounds = false
+        topicTableView.publisher(for: \.contentSize)
+            .sink { newContentSize  in
+                self.tableViewHeight.constant = newContentSize.height
+                
+            }
+            .store(in: &tokens)
+        
     }
     
 
@@ -46,12 +59,21 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
 
 extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return topics.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopicCell", for: indexPath) as! TopicsTableViewCell
+        let topic = topics[indexPath.item]
+
+        cell.topicLabel.text = topic.topicName
+        cell.topicIcon.image = UIImage(systemName: topic.topicSymbol)
+
+        return cell
     }
-    
-    
+}
+
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       tableView.deselectRow(at: indexPath, animated: true)
+   }
 }

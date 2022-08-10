@@ -1117,16 +1117,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Qq-S7-rDA" customClass="CustomView" customModule="Thor_Love_and_Thunder" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="482" width="382" height="114"/>
+                                        <rect key="frame" x="16" y="482" width="382" height="200"/>
                                         <subviews>
                                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcw-2f-kTn" customClass="CustomBlurView" customModule="Thor_Love_and_Thunder" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="114"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="200"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N1t-dz-MrJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="114"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="200"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="alh-r1-PVD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="114"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="200"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1214,6 +1214,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="4ei-oq-s30"/>
                                             <constraint firstAttribute="trailing" secondItem="tcw-2f-kTn" secondAttribute="trailing" id="Chh-7b-A3s"/>
                                             <constraint firstAttribute="bottom" secondItem="tcw-2f-kTn" secondAttribute="bottom" id="JgO-vb-7f7"/>
                                             <constraint firstItem="tcw-2f-kTn" firstAttribute="top" secondItem="4Qq-S7-rDA" secondAttribute="top" id="bVt-2s-jAP"/>
@@ -1243,7 +1244,6 @@
                                     <constraint firstItem="Sm1-9f-z77" firstAttribute="leading" secondItem="ayR-y0-YJc" secondAttribute="leading" constant="16" id="IXP-VQ-yJv"/>
                                     <constraint firstItem="Sm1-9f-z77" firstAttribute="top" secondItem="WxA-nl-NTH" secondAttribute="bottom" constant="30" id="JpK-oF-OnJ"/>
                                     <constraint firstItem="WxA-nl-NTH" firstAttribute="top" secondItem="f7J-88-5ey" secondAttribute="top" constant="20" id="Qwo-ze-Lhn"/>
-                                    <constraint firstItem="ayR-y0-YJc" firstAttribute="bottom" secondItem="4Qq-S7-rDA" secondAttribute="bottom" constant="200" id="YfI-QV-7K3"/>
                                     <constraint firstItem="ayR-y0-YJc" firstAttribute="trailing" secondItem="WxA-nl-NTH" secondAttribute="trailing" constant="16" id="cZf-R5-mZh"/>
                                     <constraint firstItem="4Qq-S7-rDA" firstAttribute="top" secondItem="Sm1-9f-z77" secondAttribute="bottom" constant="16" id="hHF-ne-P56"/>
                                     <constraint firstItem="ayR-y0-YJc" firstAttribute="trailing" secondItem="4Qq-S7-rDA" secondAttribute="trailing" constant="16" id="sm6-5P-K3K"/>
@@ -1272,6 +1272,7 @@
                     <tabBarItem key="tabBarItem" title="Explore" image="magnifyingglass" catalog="system" id="6zg-Cu-66Y"/>
                     <connections>
                         <outlet property="sectionsCollectionsView" destination="WxA-nl-NTH" id="7t2-bz-9z0"/>
+                        <outlet property="tableViewHeight" destination="4ei-oq-s30" id="8ve-zg-cfB"/>
                         <outlet property="topicTableView" destination="alh-r1-PVD" id="00I-ek-xta"/>
                     </connections>
                 </viewController>

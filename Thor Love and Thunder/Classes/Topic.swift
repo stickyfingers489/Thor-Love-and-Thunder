@@ -19,7 +19,7 @@ class Topic {
 }
 
 let topics = [
-    Topic(name: "Thesis", icon: "books.vertical.circlr"),
-    Topic(name: "Dissetation", icon: "book.fill.circle"),
+    Topic(name: "Thesis", Icon: "books.vertical.circlr"),
+    Topic(name: "Dissetation", Icon: "book.fill.circle"),
     Topic(name: "PHD Project", Icon: "graduationcap.fill")
 ]
