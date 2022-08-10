@@ -9,6 +9,7 @@ import UIKit
 
 class ExploreViewController: UIViewController {
 
+    @IBOutlet weak var topicTableView: UITableView!
     @IBOutlet weak var sectionsCollectionsView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,10 @@ class ExploreViewController: UIViewController {
         sectionsCollectionsView.delegate = self
         sectionsCollectionsView.dataSource = self
         sectionsCollectionsView.layer.masksToBounds = false
+        
+        topicTableView.delegate = self
+        topicTableView.dataSource = self
+        topicTableView.layer.masksToBounds = false
     }
     
 
@@ -39,3 +44,14 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
 }
 
+extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+}
