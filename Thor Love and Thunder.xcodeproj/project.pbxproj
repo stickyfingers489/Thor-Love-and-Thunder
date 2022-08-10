@@ -20,6 +20,7 @@
 		AD5CFD0628A161B700D396CB /* CustomTabBarViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CFD0528A161B600D396CB /* CustomTabBarViewContoller.swift */; };
 		AD5CFD0828A29A2700D396CB /* SectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CFD0728A29A2600D396CB /* SectionsCollectionViewCell.swift */; };
 		AD5CFD0A28A29E8300D396CB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CFD0928A29E8200D396CB /* ExploreViewController.swift */; };
+		AD823C5B28A43259004667C6 /* TopicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD823C5A28A43259004667C6 /* TopicsTableViewCell.swift */; };
 		ADBE1E132892A56700E4E5E0 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBE1E122892A56700E4E5E0 /* CoursesTableViewCell.swift */; };
 		ADCD345F289125FA0082DA3F /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCD345E289125F90082DA3F /* Course.swift */; };
 		ADD0E8152886E6F100CCA19F /* HandbookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0E8142886E6F100CCA19F /* HandbookCollectionViewCell.swift */; };
@@ -45,6 +46,7 @@
 		AD5CFD0528A161B600D396CB /* CustomTabBarViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewContoller.swift; sourceTree = "<group>"; };
 		AD5CFD0728A29A2600D396CB /* SectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD5CFD0928A29E8200D396CB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		AD823C5A28A43259004667C6 /* TopicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableViewCell.swift; sourceTree = "<group>"; };
 		ADBE1E122892A56700E4E5E0 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		ADCD345E289125F90082DA3F /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		ADD0E8142886E6F100CCA19F /* HandbookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandbookCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				ADBE1E122892A56700E4E5E0 /* CoursesTableViewCell.swift */,
 				ADEA3FA4289D03130082B0E3 /* SectionTableViewCell.swift */,
 				AD5CFD0728A29A2600D396CB /* SectionsCollectionViewCell.swift */,
+				AD823C5A28A43259004667C6 /* TopicsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				ADEA3FA5289D03130082B0E3 /* SectionTableViewCell.swift in Sources */,
 				AD5CFD0A28A29E8300D396CB /* ExploreViewController.swift in Sources */,
 				AD5CBD6928804C81007CA91E /* FeaturedViewController.swift in Sources */,
+				AD823C5B28A43259004667C6 /* TopicsTableViewCell.swift in Sources */,
 				AD5CBD7F28814DD0007CA91E /* CustomUIView.swift in Sources */,
 				AD5CFD0628A161B700D396CB /* CustomTabBarViewContoller.swift in Sources */,
 				AD5CBD8028814DD0007CA91E /* Font.swift in Sources */,
