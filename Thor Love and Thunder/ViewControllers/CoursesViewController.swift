@@ -46,7 +46,7 @@ class CoursesViewController: UIViewController {
         self.backgroundImage.image = course?.courseBackground
         self.titleLabel.text = course? .courseTitle
         self.descriptionLabel.text = course? .courseSubtitle
-        self.authorLabel.text = "Taught by \(course?.courseAuthor?.formatted(.list(type: .and, width: .standard)) ?? "Design+Code")"
+        self.authorLabel.text = "Taught by \(course?.courseAuthor?.formatted(.list(type: .and, width: .standard)) ?? "Stickyfingers489")"
     }
     
     @IBAction func goBack(_ sender: Any) {

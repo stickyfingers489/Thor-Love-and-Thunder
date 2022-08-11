@@ -1146,7 +1146,8 @@
                                                                                         <color key="tintColor" name="AccentColor"/>
                                                                                     </imageView>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <color key="tintColor" name="PrimaryBackground"/>
                                                                                 <constraints>
                                                                                     <constraint firstItem="yQv-VB-oIF" firstAttribute="top" secondItem="v5p-GN-uVx" secondAttribute="top" constant="8" id="CDf-gJ-O6r"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="yQv-VB-oIF" secondAttribute="bottom" constant="8" id="S2F-jP-WIg"/>

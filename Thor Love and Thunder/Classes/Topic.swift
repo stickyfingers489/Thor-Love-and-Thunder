@@ -13,13 +13,13 @@ class Topic {
     
     init(name: String!, Icon: String!){
         self.topicName = name
-        self.topicSymbol = name
+        self.topicSymbol = Icon
     }
     
 }
 
 let topics = [
-    Topic(name: "Thesis", Icon: "books.vertical.circlr"),
-    Topic(name: "Dissetation", Icon: "book.fill.circle"),
-    Topic(name: "PHD Project", Icon: "graduationcap.fill")
+    Topic(name: "Thesis", Icon: "books.vertical.circle"),
+    Topic(name: "Dissetation", Icon: "books.fill.circle"),
+    Topic(name: "PHD Project", Icon: "graduationcap.circle")
 ]
