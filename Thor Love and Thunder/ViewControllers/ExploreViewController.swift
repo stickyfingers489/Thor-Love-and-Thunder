@@ -13,6 +13,7 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var topicTableView: UITableView!
     @IBOutlet weak var sectionsCollectionsView: UICollectionView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var popularCollectionView: UICollectionView!
     
     private var tokens: Set<AnyCancellable> = []
     
@@ -23,6 +24,11 @@ class ExploreViewController: UIViewController {
         sectionsCollectionsView.delegate = self
         sectionsCollectionsView.dataSource = self
         sectionsCollectionsView.layer.masksToBounds = false
+        
+        popularCollectionView.delegate = self
+        popularCollectionView.dataSource = self
+        popularCollectionView.layer.masksToBounds = false
+        
         
         topicTableView.delegate = self
         topicTableView.dataSource = self
@@ -41,19 +47,37 @@ class ExploreViewController: UIViewController {
 
 extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections.count
+        if collectionView ==  sectionsCollectionsView {
+            return sections.count
+        } else {
+            return handbooks.count
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionViewCell
-        let section = sections[indexPath.item]
+        if collectionView == sectionsCollectionsView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionViewCell
+            let section = sections[indexPath.item]
 
-        cell.Titlelabel.text = section.sectionTitle
-        cell.Subtitlelabel.text = section.sectionSubtitle
-        cell.logo.image = section.sectionIcon
-        cell.banner.image = section.sectionBanner
+            cell.Titlelabel.text = section.sectionTitle
+            cell.Subtitlelabel.text = section.sectionSubtitle
+            cell.logo.image = section.sectionIcon
+            cell.banner.image = section.sectionBanner
 
-        return cell
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCell", for: indexPath) as! HandbookCollectionViewCell
+            let handbook = handbooks[indexPath.item]
+            
+            cell.Titlelabel.text = handbook.courseTitle
+            cell.Subtitlelabel.text = handbook.courseSubtitle
+            cell.Descriptionlabel.text = handbook.courseDescription
+            cell.gradient.colors = handbook.courseGradient
+            cell.logo.image = handbook.courseIcon
+            cell.banner.image = handbook.courseBanner
+            
+            return cell        }
+        
     }
 }
 
@@ -65,15 +89,15 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopicCell", for: indexPath) as! TopicsTableViewCell
         let topic = topics[indexPath.item]
-
+        
         cell.topicLabel.text = topic.topicName
         cell.topicIcon.image = UIImage(systemName: topic.topicSymbol)
-
+        
         return cell
     }
 }
 
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       tableView.deselectRow(at: indexPath, animated: true)
-   }
+    tableView.deselectRow(at: indexPath, animated: true)
 }
+
