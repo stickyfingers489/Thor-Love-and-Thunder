@@ -16,9 +16,7 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var CardView: UIView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var handbooksCollectionView: UICollectionView!
-   // @IBOutlet weak var CoursesTableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var CoursesTableView: UITableView!
     
     private var tokens: Set<AnyCancellable> = []
