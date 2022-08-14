@@ -347,7 +347,7 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65O-ur-xSb">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65O-ur-xSb">
                                                             <rect key="frame" x="20" y="236.5" width="342" height="25.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -399,6 +399,14 @@
                                                         <constraint firstAttribute="trailing" secondItem="dcu-sX-Yon" secondAttribute="trailing" id="tNc-ou-trn"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="courseBackground" destination="dcu-sX-Yon" id="4IP-Mj-NoP"/>
+                                                    <outlet property="courseBanner" destination="g2g-mE-yrk" id="lma-no-Umi"/>
+                                                    <outlet property="courseLogo" destination="c72-1a-yeS" id="hEd-fM-ELW"/>
+                                                    <outlet property="descriptionLabel" destination="NM3-hz-c5Z" id="FDO-bw-MgW"/>
+                                                    <outlet property="subtitleLabel" destination="Y47-x1-Hzx" id="Cg7-oA-fwM"/>
+                                                    <outlet property="titleLabel" destination="65O-ur-xSb" id="HID-lR-Abp"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
