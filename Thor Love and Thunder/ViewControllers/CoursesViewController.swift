@@ -48,6 +48,28 @@ class CoursesViewController: UIViewController {
         self.titleLabel.text = course? .courseTitle
         self.descriptionLabel.text = course? .courseSubtitle
         self.authorLabel.text = "Taught by \(course?.courseAuthor?.formatted(.list(type: .and, width: .standard)) ?? "Stickyfingers489")"
+        
+        //Create UIMenu
+        let menu = UIMenu(
+            title: "Course Options",
+            options: .displayInline,
+            children: [
+                UIAction(title: "Share", image: UIImage(systemName: "square.and.arrow.up"), handler: { _ in
+                    // Share Course
+                }),
+                UIAction(title: "Take Test", image: UIImage(systemName: "highlighter"), handler: { _ in
+                    // Take Test
+                }),
+                UIAction(title: "Download", image: UIImage(systemName: "square.and.arrow.down"), handler: { _ in
+                    // Download Course
+                }),
+                UIAction(title: "Forums", image: UIImage(systemName: "chevron.left.forwardslash.chevron.right"), handler: { _ in
+                    // Forums
+                }),
+            ]
+            )
+        MenuButton.showsMenuAsPrimaryAction = true
+        MenuButton.menu = menu
     }
     
     @IBAction func goBack(_ sender: Any) {
