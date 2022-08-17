@@ -21,7 +21,8 @@ class CoursesViewController: UIViewController {
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
-  // @IBOutlet var iconImageView: CustomImageView!
+//   @IBOutlet var iconImageView: CustomImageView!
+    @IBOutlet weak var MenuButton: UIButton!
     
     @IBOutlet weak var sectionsTableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
@@ -41,7 +42,7 @@ class CoursesViewController: UIViewController {
      
         
        // set date for preview card
-      //  self.iconImageView.image = course?.courseIcon
+     //   self.iconImageView.image = course?.courseIcon
         self.bannerImage.image = course?.courseBanner
         self.backgroundImage.image = course?.courseBackground
         self.titleLabel.text = course? .courseTitle
