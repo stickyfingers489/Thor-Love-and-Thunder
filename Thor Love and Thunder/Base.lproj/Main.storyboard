@@ -945,7 +945,7 @@
         <scene sceneID="A9r-O0-kDD">
             <objects>
                 <viewController id="HcL-ny-U2C" customClass="ExploreViewController" customModule="Thor_Love_and_Thunder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tth-8d-b5V">
+                    <view key="view" contentMode="scaleAspectFill" id="tth-8d-b5V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1464,13 +1464,13 @@
                         <viewLayoutGuide key="safeArea" id="ijZ-db-6MH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="f7J-88-5ey" firstAttribute="leading" secondItem="ijZ-db-6MH" secondAttribute="leading" id="3Fk-TM-U4c"/>
+                            <constraint firstItem="f7J-88-5ey" firstAttribute="leading" secondItem="tth-8d-b5V" secondAttribute="leading" id="3Fk-TM-U4c"/>
                             <constraint firstAttribute="bottom" secondItem="9fZ-l9-6Te" secondAttribute="bottom" id="57u-Eb-EGG"/>
                             <constraint firstItem="f7J-88-5ey" firstAttribute="top" secondItem="N9v-e0-VZe" secondAttribute="bottom" id="5Pk-b1-eWt"/>
-                            <constraint firstItem="f7J-88-5ey" firstAttribute="trailing" secondItem="ijZ-db-6MH" secondAttribute="trailing" id="GEe-pT-ypH"/>
+                            <constraint firstItem="f7J-88-5ey" firstAttribute="trailing" secondItem="tth-8d-b5V" secondAttribute="trailing" id="GEe-pT-ypH"/>
                             <constraint firstItem="9fZ-l9-6Te" firstAttribute="leading" secondItem="tth-8d-b5V" secondAttribute="leading" id="GlN-z4-vOP"/>
                             <constraint firstItem="9fZ-l9-6Te" firstAttribute="top" secondItem="tth-8d-b5V" secondAttribute="top" id="bYy-mJ-oZI"/>
-                            <constraint firstItem="ijZ-db-6MH" firstAttribute="bottom" secondItem="f7J-88-5ey" secondAttribute="bottom" id="bgw-ZB-hCj"/>
+                            <constraint firstAttribute="bottom" secondItem="f7J-88-5ey" secondAttribute="bottom" constant="83" id="bgw-ZB-hCj"/>
                             <constraint firstItem="N9v-e0-VZe" firstAttribute="leading" secondItem="tth-8d-b5V" secondAttribute="leading" id="dq2-sE-5yb"/>
                             <constraint firstItem="N9v-e0-VZe" firstAttribute="trailing" secondItem="tth-8d-b5V" secondAttribute="trailing" id="f9E-ak-PXD"/>
                             <constraint firstItem="N9v-e0-VZe" firstAttribute="top" secondItem="tth-8d-b5V" secondAttribute="top" id="oUd-b8-cZh"/>
