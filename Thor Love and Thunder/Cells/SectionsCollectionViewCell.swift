@@ -30,7 +30,16 @@ class SectionsCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 30
         layer.cornerCurve = .continuous
         
-       
+        //Accessibility
+        Titlelabel.adjustsFontForContentSizeCategory = true
+        Titlelabel.font = UIFont.preferredFont(for: .body, weight: .semibold)
+        Titlelabel.maximumContentSizeCategory = .extraExtraLarge
+        
+        Subtitlelabel.adjustsFontForContentSizeCategory = true
+        Subtitlelabel.font = UIFont.preferredFont(for: .caption1, weight: .regular)
+        Subtitlelabel.maximumContentSizeCategory = .extraLarge
+        
+  
     }
     override func prepareForReuse() {
         super.prepareForReuse()

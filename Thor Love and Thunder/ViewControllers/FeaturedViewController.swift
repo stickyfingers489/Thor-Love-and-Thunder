@@ -18,6 +18,15 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var handbooksCollectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var CoursesTableView: UITableView!
+    @IBOutlet weak var FeaturedTitleLabel: UILabel!
+    
+    @IBOutlet weak var FeaturedSubtitleLabel: UILabel!
+    
+    @IBOutlet weak var FeaturedDescLabel: UILabel!
+    
+    @IBOutlet weak var handbookslabel: UILabel!
+    
+    @IBOutlet weak var coursesLabel: UILabel!
     
     private var tokens: Set<AnyCancellable> = []
     
@@ -41,6 +50,28 @@ class FeaturedViewController: UIViewController {
             .store(in: &tokens)
         
         scrollView.delegate = self
+        
+        // Accessibility
+        FeaturedTitleLabel.adjustsFontForContentSizeCategory = true
+        FeaturedTitleLabel.font = UIFont.preferredFont(for: .title1, weight: .bold)
+        FeaturedTitleLabel.maximumContentSizeCategory = .accessibilityExtraLarge
+        
+        FeaturedSubtitleLabel.adjustsFontForContentSizeCategory = true
+        FeaturedSubtitleLabel.font = UIFont.preferredFont(for: .footnote, weight: .bold)
+        FeaturedSubtitleLabel.maximumContentSizeCategory = .accessibilityMedium
+        
+        FeaturedDescLabel.adjustsFontForContentSizeCategory = true
+        FeaturedDescLabel.font = UIFont.preferredFont(for: .footnote, weight: .regular)
+        FeaturedDescLabel.maximumContentSizeCategory = .accessibilityMedium
+        
+        handbookslabel.adjustsFontForContentSizeCategory = true
+        handbookslabel.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        handbookslabel.maximumContentSizeCategory = .accessibilityMedium
+        
+        coursesLabel.adjustsFontForContentSizeCategory = true
+        coursesLabel.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        coursesLabel.maximumContentSizeCategory = .accessibilityMedium
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailsVC = segue.destination as? CoursesViewController, let course = sender as? Course {

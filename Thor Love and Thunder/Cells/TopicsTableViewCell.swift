@@ -15,6 +15,13 @@ class TopicsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        // Accessibility
+        topicLabel.adjustsFontForContentSizeCategory = true
+        topicLabel.font = UIFont.preferredFont(for: .body, weight: .semibold)
+        topicLabel.maximumContentSizeCategory = .extraExtraLarge
+        
+
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -17,6 +17,9 @@ class ExploreViewController: UIViewController {
     
     private var tokens: Set<AnyCancellable> = []
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var topicsLabel: UILabel!
+    @IBOutlet weak var popularLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,20 @@ class ExploreViewController: UIViewController {
             }
             .store(in: &tokens)
         
+        // Accessibility
+        titleLabel.adjustsFontForContentSizeCategory = true
+        titleLabel.font = UIFont.preferredFont(for: .title2, weight: .bold)
+        titleLabel.maximumContentSizeCategory = .accessibilityExtraLarge
+        
+        
+        topicsLabel.adjustsFontForContentSizeCategory = true
+        topicsLabel.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        topicsLabel.maximumContentSizeCategory = .accessibilityMedium
+        
+        popularLabel.adjustsFontForContentSizeCategory = true
+        popularLabel.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        popularLabel.maximumContentSizeCategory = .accessibilityMedium
+            
     }
     
 
