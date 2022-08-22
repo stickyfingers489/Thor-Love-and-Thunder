@@ -28,6 +28,7 @@
 		AD5CFD0628A161B700D396CB /* CustomTabBarViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CFD0528A161B600D396CB /* CustomTabBarViewContoller.swift */; };
 		AD5CFD0828A29A2700D396CB /* SectionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CFD0728A29A2600D396CB /* SectionsCollectionViewCell.swift */; };
 		AD5CFD0A28A29E8300D396CB /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CFD0928A29E8200D396CB /* ExploreViewController.swift */; };
+		AD68778828B36A8000E913BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68778728B36A8000E913BB /* LoginViewController.swift */; };
 		AD823C5B28A43259004667C6 /* TopicsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD823C5A28A43259004667C6 /* TopicsTableViewCell.swift */; };
 		AD823C5D28A436C2004667C6 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD823C5C28A436C2004667C6 /* Topic.swift */; };
 		ADBE1E132892A56700E4E5E0 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBE1E122892A56700E4E5E0 /* CoursesTableViewCell.swift */; };
@@ -56,6 +57,7 @@
 		AD5CFD0528A161B600D396CB /* CustomTabBarViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewContoller.swift; sourceTree = "<group>"; };
 		AD5CFD0728A29A2600D396CB /* SectionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD5CFD0928A29E8200D396CB /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		AD68778728B36A8000E913BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AD823C5A28A43259004667C6 /* TopicsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableViewCell.swift; sourceTree = "<group>"; };
 		AD823C5C28A436C2004667C6 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		ADBE1E122892A56700E4E5E0 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		AD655C3F2891402000EAC498 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AD68778728B36A8000E913BB /* LoginViewController.swift */,
 				AD5CBD6828804C81007CA91E /* FeaturedViewController.swift */,
 				ADE1D691289A3734000B8E54 /* CoursesViewController.swift */,
 				AD5CFD0928A29E8200D396CB /* ExploreViewController.swift */,
@@ -251,6 +254,7 @@
 				AD823C5D28A436C2004667C6 /* Topic.swift in Sources */,
 				ADD0E8152886E6F100CCA19F /* HandbookCollectionViewCell.swift in Sources */,
 				ADE1D692289A3735000B8E54 /* CoursesViewController.swift in Sources */,
+				AD68778828B36A8000E913BB /* LoginViewController.swift in Sources */,
 				ADEA3FA5289D03130082B0E3 /* SectionTableViewCell.swift in Sources */,
 				AD5CFD0A28A29E8300D396CB /* ExploreViewController.swift in Sources */,
 				AD5CBD6928804C81007CA91E /* FeaturedViewController.swift in Sources */,

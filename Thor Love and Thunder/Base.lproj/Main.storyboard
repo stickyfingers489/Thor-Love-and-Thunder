@@ -924,10 +924,10 @@
             </objects>
             <point key="canvasLocation" x="919" y="-586"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="YEr-JY-8eD">
             <objects>
-                <viewController id="7OV-HY-0xn" sceneMemberID="viewController">
+                <viewController id="7OV-HY-0xn" customClass="LoginViewController" customModule="Thor_Love_and_Thunder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgz-bd-5vr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -935,7 +935,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background 6" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-Dy-Wqd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Y4-f6-Ue1" customClass="CustomView" customModule="Thor_Love_and_Thunder" customModuleProvider="target">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Y4-f6-Ue1">
                                 <rect key="frame" x="20" y="190" width="374" height="516"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmb-yF-TxO" customClass="CustomBlurView" customModule="Thor_Love_and_Thunder" customModuleProvider="target">
@@ -1249,6 +1249,14 @@
                             <constraint firstAttribute="bottom" secondItem="eeX-Dy-Wqd" secondAttribute="bottom" id="lnL-66-H9e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PrimaryBtn" destination="xCi-cv-3L1" id="37N-6e-VE5"/>
+                        <outlet property="accessoryBtn" destination="vOL-AE-l02" id="tLb-WU-qBn"/>
+                        <outlet property="emailTextField" destination="8R5-oi-MkR" id="7VZ-yn-bsj"/>
+                        <outlet property="loginCard" destination="2Y4-f6-Ue1" id="hXH-nf-xti"/>
+                        <outlet property="passwordTextField" destination="0Fu-Ez-rAG" id="5NY-bq-WV4"/>
+                        <outlet property="titleLabel" destination="bmC-8S-tY0" id="JC7-uy-1ER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOg-av-BK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
