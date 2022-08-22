@@ -935,7 +935,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background 6" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-Dy-Wqd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Y4-f6-Ue1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Y4-f6-Ue1">
                                 <rect key="frame" x="20" y="190" width="374" height="516"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmb-yF-TxO" customClass="CustomBlurView" customModule="Thor_Love_and_Thunder" customModuleProvider="target">
@@ -1115,6 +1115,9 @@
                                                             <buttonConfiguration key="configuration" style="plain" title="Create Account">
                                                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="PrimaryActionButton:" destination="7OV-HY-0xn" eventType="touchUpInside" id="PSm-Ao-vAm"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1164,6 +1167,9 @@
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
                                                         <fontDescription key="subtitleFontDescription" type="system" pointSize="0.0"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="AcessoryActionButton:" destination="7OV-HY-0xn" eventType="touchUpInside" id="ISI-4k-faS"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1265,7 +1271,7 @@
         <!--Custom Tab Bar View Contoller-->
         <scene sceneID="HuX-R2-tVW">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wgl-7e-Jfi" customClass="CustomTabBarViewContoller" customModule="Thor_Love_and_Thunder" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CustomTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="Wgl-7e-Jfi" customClass="CustomTabBarViewContoller" customModule="Thor_Love_and_Thunder" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uoD-Gl-XcX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
