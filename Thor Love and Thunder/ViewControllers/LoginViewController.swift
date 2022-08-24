@@ -10,16 +10,29 @@ import FirebaseAuth
 import Combine
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var loginCard: UIView!
     
+    enum LoginStatus {
+        case signUp
+        case signIn
+    }
+    @IBOutlet weak var loginCard: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var PrimaryBtn: UIButton!
     @IBOutlet weak var accessoryBtn: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    
     var emailIsEmpty = true
     var passwordIsEmpty = true
+    var loginStatus: LoginStatus = .signUp {
+        didSet {
+            self.titleLabel.text = (loginStatus == .signUp) ? "Sign up" : "Sign in"
+            self.PrimaryBtn.setTitle(loginStatus == .signUp) ? "Create account": "Sign in", for: .normal)
+            self.accessoryBtn.setTitle(loginStatus == .signUp) ? "Don't have an account? : "Already have an account? ", for: .normal)
+            self.passwordTextField.textContentType = (loginStatus == .signUp) ? .newPassword : .password
+        }
+    }
     var tokens: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
@@ -48,24 +61,36 @@ class LoginViewController: UIViewController {
     
     @IBAction func PrimaryActionButton(_ sender: Any) {
         if (emailIsEmpty || passwordIsEmpty) {
-            let alert = UIAlertController(title: "Missing Information", message: "Please make sure to enter a valid email address and a password", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        } else {
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
-                guard error == nil else {
-                    print(error!.localizedDescription)
-                    return
-                }
-                //segue over to home screen
-                self.goToHomeScreen()
-                
-            }
-        }
-    }
+               let alert = UIAlertController(title: "Missing Information", message: "Please make sure to enter a valid email address and a password", preferredStyle: .alert)
+               alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+               self.present(alert, animated: true, completion: nil)
+           } else {
+               if loginStatus == .signUp {
+                   Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { authResult, error in
+                       guard error == nil else {
+                           print(error!.localizedDescription)
+                           return
+                       }
+
+                       // Segue over to the home screen
+                       self.goToHomeScreen()
+                   }
+               } else {
+                   Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { authResult, error in
+                       guard error == nil else {
+                           print(error!.localizedDescription)
+                           return
+                       }
+
+                       // Segue to the home screen
+                       self.goToHomeScreen()
+                   }
+               }
+           }
+       }
     
     @IBAction func AcessoryActionButton(_ sender: Any) {
-        
+        self.loginStatus = (self.loginStatus == .signUp) ? .signIn : .signUp
     }
     func goToHomeScreen() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomTabBarViewController") as! CustomTabBarViewController
