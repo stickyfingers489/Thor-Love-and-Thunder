@@ -23,3 +23,9 @@ let topics = [
     Topic(name: "Dissertation", Icon: "books.vertical.circle"),
     Topic(name: "PHD Project", Icon: "graduationcap.circle")
 ]
+
+let librarySettings = [
+    Topic(name: "History", Icon: "clock.fill"),
+    Topic(name: "Favorites", Icon: "star.fill"),
+    Topic(name: "Downloads", Icon: "square.and.arrow.down.fill")
+]

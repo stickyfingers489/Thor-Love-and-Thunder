@@ -28,8 +28,8 @@ class LoginViewController: UIViewController {
     var loginStatus: LoginStatus = .signUp {
         didSet {
             self.titleLabel.text = (loginStatus == .signUp) ? "Sign up" : "Sign in"
-            self.PrimaryBtn.setTitle(loginStatus == .signUp) ? "Create account": "Sign in", for: .normal)
-            self.accessoryBtn.setTitle(loginStatus == .signUp) ? "Don't have an account? : "Already have an account? ", for: .normal)
+            self.PrimaryBtn.setTitle((loginStatus == .signUp) ? "Create account": "Sign in", for: .normal)
+            self.accessoryBtn.setTitle((loginStatus == .signUp) ? "Don't have an account?" : "Already have an account?", for: .normal)
             self.passwordTextField.textContentType = (loginStatus == .signUp) ? .newPassword : .password
         }
     }
@@ -66,7 +66,7 @@ class LoginViewController: UIViewController {
                self.present(alert, animated: true, completion: nil)
            } else {
                if loginStatus == .signUp {
-                   Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { authResult, error in
+                   Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
                        guard error == nil else {
                            print(error!.localizedDescription)
                            return
@@ -76,7 +76,7 @@ class LoginViewController: UIViewController {
                        self.goToHomeScreen()
                    }
                } else {
-                   Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { authResult, error in
+                   Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
                        guard error == nil else {
                            print(error!.localizedDescription)
                            return

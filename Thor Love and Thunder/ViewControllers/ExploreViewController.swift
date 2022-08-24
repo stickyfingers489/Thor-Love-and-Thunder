@@ -15,6 +15,7 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
+    
     private var tokens: Set<AnyCancellable> = []
     
     @IBOutlet weak var titleLabel: UILabel!

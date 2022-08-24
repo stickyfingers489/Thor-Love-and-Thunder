@@ -37,6 +37,7 @@
 		ADE1D692289A3735000B8E54 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1D691289A3734000B8E54 /* CoursesViewController.swift */; };
 		ADE1D694289A4375000B8E54 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1D693289A4371000B8E54 /* Section.swift */; };
 		ADEA3FA5289D03130082B0E3 /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA3FA4289D03130082B0E3 /* SectionTableViewCell.swift */; };
+		ADF23D5F28B5E87400A1ED88 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF23D5E28B5E87300A1ED88 /* LibraryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		ADE1D691289A3734000B8E54 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		ADE1D693289A4371000B8E54 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		ADEA3FA4289D03130082B0E3 /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
+		ADF23D5E28B5E87300A1ED88 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				AD5CBD6828804C81007CA91E /* FeaturedViewController.swift */,
 				ADE1D691289A3734000B8E54 /* CoursesViewController.swift */,
 				AD5CFD0928A29E8200D396CB /* ExploreViewController.swift */,
+				ADF23D5E28B5E87300A1ED88 /* LibraryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				ADE1D692289A3735000B8E54 /* CoursesViewController.swift in Sources */,
 				AD68778828B36A8000E913BB /* LoginViewController.swift in Sources */,
 				ADEA3FA5289D03130082B0E3 /* SectionTableViewCell.swift in Sources */,
+				ADF23D5F28B5E87400A1ED88 /* LibraryViewController.swift in Sources */,
 				AD5CFD0A28A29E8300D396CB /* ExploreViewController.swift in Sources */,
 				AD5CBD6928804C81007CA91E /* FeaturedViewController.swift in Sources */,
 				AD823C5B28A43259004667C6 /* TopicsTableViewCell.swift in Sources */,
