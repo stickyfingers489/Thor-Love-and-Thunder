@@ -25,7 +25,7 @@ class CoursesTableViewCell: UITableViewCell {
         layer.masksToBounds = false
         layer.cornerRadius = 30
 
-        //Accessibility
+        // Accessibility
         titleLabel.adjustsFontForContentSizeCategory = true
         titleLabel.font = UIFont.preferredFont(for: .title1, weight: .semibold)
         titleLabel.maximumContentSizeCategory = .extraExtraLarge
