@@ -24,6 +24,7 @@ class HandbookCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         super.layoutIfNeeded()
     }
+    
     override public func awakeFromNib() {
         super.awakeFromNib()
         layer.shadowColor = UIColor(named: "Shadow")!.cgColor
