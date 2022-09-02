@@ -19,13 +19,9 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var CoursesTableView: UITableView!
     @IBOutlet weak var FeaturedTitleLabel: UILabel!
-    
     @IBOutlet weak var FeaturedSubtitleLabel: UILabel!
-    
     @IBOutlet weak var FeaturedDescLabel: UILabel!
-    
     @IBOutlet weak var handbookslabel: UILabel!
-    
     @IBOutlet weak var coursesLabel: UILabel!
     
     private var tokens: Set<AnyCancellable> = []

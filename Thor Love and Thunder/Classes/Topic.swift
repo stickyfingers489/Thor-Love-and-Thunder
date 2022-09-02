@@ -10,6 +10,7 @@ import UIKit
 class Topic {
     var topicName: String
     var topicSymbol: String
+  
     
     init(name: String!, Icon: String!){
         self.topicName = name

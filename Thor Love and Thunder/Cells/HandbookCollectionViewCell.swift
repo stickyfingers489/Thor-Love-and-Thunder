@@ -44,7 +44,7 @@ class HandbookCollectionViewCell: UICollectionViewCell {
         overlay.layer.cornerRadius = 30
         overlay.layer.cornerCurve = .continuous
         
-        //Accessibility
+        // Accessibility
         Titlelabel.adjustsFontForContentSizeCategory = true
         Titlelabel.font = UIFont.preferredFont(for: .headline, weight: .semibold)
         Titlelabel.maximumContentSizeCategory = .extraExtraLarge

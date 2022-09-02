@@ -12,7 +12,6 @@ class SectionTableViewCell: UITableViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var courseLogo: UIImageView!
-   
     
     override func awakeFromNib() {
         super.awakeFromNib()

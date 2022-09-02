@@ -24,17 +24,17 @@ class LibraryViewController: UIViewController {
         super.viewDidLoad()
 
         // Collection View
-                self.sectionsCollectionView.delegate = self
-                self.sectionsCollectionView.dataSource = self
-                self.sectionsCollectionView.layer.masksToBounds = false
+                self.sectionsCollectionsView.delegate = self
+                self.sectionsCollectionsView.dataSource = self
+                self.sectionsCollectionsView.layer.masksToBounds = false
 
                 // Table View
-                self.topicsTableView.delegate = self
-                self.topicsTableView.dataSource = self
-                self.topicsTableView.layer.masksToBounds = true
+                self.topicTableView.delegate = self
+                self.topicTableView.dataSource = self
+                self.topicTableView.layer.masksToBounds = true
 
                 // Subscribe to table view changes
-                topicsTableView
+                topicTableView
                     .publisher(for: \.contentSize)
                     .sink { contentSize in
                         self.tableViewHeight.constant = contentSize.height + 10
@@ -64,7 +64,7 @@ class LibraryViewController: UIViewController {
             }
 
             func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionCollectionViewCell
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionsViewCell
                 let section = sections[indexPath.item]
 
                 cell.titleLabel.text = section.sectionTitle
@@ -82,11 +82,11 @@ class LibraryViewController: UIViewController {
             }
 
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "TopicCell", for: indexPath) as! TopicTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TopicCell", for: indexPath) as! TopicsTableViewCell
                 let setting = librarySettings[indexPath.row]
 
                 cell.topicLabel.text = setting.topicName
-                cell.topicLogo.image = UIImage(systemName: setting.topicSymbol)
+                cell.topicIcon.image = UIImage(systemName: setting.topicSymbol)
 
                 return cell
             }
