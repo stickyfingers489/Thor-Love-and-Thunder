@@ -27,8 +27,8 @@ struct FlipView: View {
                     anchorZ: 0.0,
                     perspective: 0.3
                 )
-                .animation(show ? .easeIn(duration: 0.3) : Animation.easeOut(duration: 0.3).delay(0.3))(
-                )
+                .animation(show ? .easeIn(duration: 0.3) : Animation.easeOut(duration: 0.3).delay(0.3))
+                
             CertificateItem(item: item2, color1: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)), color2: Color(#colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)), show: $show)
                 .rotation3DEffect(
                     Angle(degrees: show ? 0 : -90),

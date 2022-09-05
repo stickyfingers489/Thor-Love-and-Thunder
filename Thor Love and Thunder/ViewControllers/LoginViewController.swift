@@ -42,17 +42,17 @@ class LoginViewController: UIViewController {
             self.loginCard.alpha = 1
             self.loginCard.frame = self.loginCard.frame.offsetBy(dx: 0, dy: -400)
             
-            emailTextField.publisher(for: \.text)
+            self.emailTextField.publisher(for: \.text)
                 .sink { newValue in
                     self.emailIsEmpty = (newValue == "" || newValue == nil)
                 }
-                .store(in: &tokens)
+                .store(in: &self.tokens)
             
-            passwordTextField.publisher(for: \.text)
+            self.passwordTextField.publisher(for: \.text)
                 .sink { newValue in
                     self.passwordIsEmpty = (newValue == "" || newValue == nil)
                 }
-                .store(in: &tokens)
+                .store(in: &self.tokens)
             
         }
         
