@@ -64,11 +64,11 @@ class LibraryViewController: UIViewController {
             }
 
             func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionsViewCell
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionViewCell
                 let section = sections[indexPath.item]
 
-                cell.titleLabel.text = section.sectionTitle
-                cell.subtitleLabel.text = section.sectionSubtitle
+                cell.Titlelabel.text = section.sectionTitle
+                cell.Subtitlelabel.text = section.sectionSubtitle
                 cell.logo.image = section.sectionIcon
                 cell.banner.image = section.sectionBanner
 
