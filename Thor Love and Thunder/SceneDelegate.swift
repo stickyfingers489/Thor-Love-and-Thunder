@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             // Navigate to the LoginViewController
             window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
             
-        } else{
+        } else {
             //Navigate to the default entry point in the storyboard
             
             window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? CustomTabBarViewContoller
