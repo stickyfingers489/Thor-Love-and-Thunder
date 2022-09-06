@@ -16,7 +16,7 @@ class SectionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        //Accessibility
+        // Accessibility
         titleLabel.adjustsFontForContentSizeCategory = true
         titleLabel.font = UIFont.preferredFont(for: .headline, weight: .semibold)
         titleLabel.maximumContentSizeCategory = .extraExtraLarge

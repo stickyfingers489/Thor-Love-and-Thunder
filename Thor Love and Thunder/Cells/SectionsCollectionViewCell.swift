@@ -30,7 +30,7 @@ class SectionsCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 30
         layer.cornerCurve = .continuous
         
-        //Accessibility
+        // Accessibility
         Titlelabel.adjustsFontForContentSizeCategory = true
         Titlelabel.font = UIFont.preferredFont(for: .body, weight: .semibold)
         Titlelabel.maximumContentSizeCategory = .extraExtraLarge
